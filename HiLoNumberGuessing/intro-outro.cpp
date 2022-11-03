@@ -3,7 +3,7 @@
 
 void intro() {
 	std::cout << "===================== Hi-Lo Guessing Game =====================" << '\n';
-	std::cout << "Instructions: You have 7 chances guess the number from 0 - 99!" << '\n';
+	std::cout << "Instructions: You have " << life << " chances guess the number from 0 - 99!" << '\n';
 	std::cout << "Try your worst!" << '\n' << '\n';
 }
 
