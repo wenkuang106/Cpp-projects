@@ -22,10 +22,11 @@ void userGuess() {
 		}
 		chance++;
 		if (iGuess != rand) {
-			std::cout << "Opp you got " << life - chance << " chances left :(" << std::endl;
+			std::cout << "Oop you got " << life - chance << " chances left :(" << std::endl;
 		}
 		if (chance == life) {
 			std::cout << "You lost LOL!" << '\n';
+			std::cout << "The number was " << rand << '\n';
 			break;
 		}
 		else if (iGuess != rand) {
