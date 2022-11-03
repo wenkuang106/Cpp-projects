@@ -1,6 +1,6 @@
 #ifndef HILO_H
 #define HILO_H
-const int life = 7;
+const int life = 5;
 
 void intro();
 int randomGen();
