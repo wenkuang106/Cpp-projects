@@ -3,8 +3,10 @@
 
 void intro();
 int passLength();
-int selectionGen();
-int indexKey();
 void passGen(int length);
+int choice();
+void outro();
+int main();
+void again();
 
 #endif // !PASSGEN_H

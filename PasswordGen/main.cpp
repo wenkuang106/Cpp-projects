@@ -5,7 +5,14 @@
 
 int main() {
 	intro();
-	int length{ passLength() };
-	passGen(length);
+	int x{ choice() };
+	if (x == 1){
+		int length{ passLength() };
+		passGen(length);
+		again();
+	}
+	else {
+		outro();
+	}
 	return 0;
 }
