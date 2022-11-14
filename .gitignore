@@ -49,3 +49,4 @@
 *.opendb
 *.db-shm
 *.db-wal
+*.json
