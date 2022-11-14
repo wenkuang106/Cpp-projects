@@ -7,6 +7,9 @@ double circle(double radius);
 double triangle(double base, double height);
 double square(double length);
 double trapezoid(double basea, double baseb, double height);
+bool againAsk();
+void againRe();
+void outro();
 
 int userChoice();
 
