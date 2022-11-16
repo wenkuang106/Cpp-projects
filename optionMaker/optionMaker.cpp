@@ -16,7 +16,7 @@ int ran(int aziz) {
     return ran;
 }
 
-void choice() { std::cout << "Enter your choice: "; }
+void choice() { std::cout << "Enter your option: "; }
 
 int main() {
     srand(time(NULL));
