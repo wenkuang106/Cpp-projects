@@ -29,7 +29,19 @@ bool question() {
     return (selection == 'y' || selection == 'Y');
 }
 
+bool questionAgain() {
+    std::cout << "Are you sure you don't want to see all the flips? (y/n): ";
+    char selection;
+    std::cin >> selection;
+    return (selection == 'y' || selection == 'Y');
+}
+
+void intro() {
+    std::cout << "Welcome to the decision maker that will solve all of your Yes/No decisions \n\n";
+}
+
 int main() {
+    intro();
     srand(time(NULL));
     const int a{ amount() };
     std::string head{ variable() };
@@ -55,13 +67,34 @@ int main() {
             break;
         }
     }
+    /*char selection{ question() };
+    if (selection) {
+      for (int count = 0; count < a; count++) {
+        std::cout << result[count] << '\n';
+      }
+    }*/
+    int n = sizeof(result) / sizeof(result[0]);
+    std::cout << "Number of times 'Yes' appears: " << std::count(result, result + a, "yes") << '\n';
+    if ((std::count(result, result + a, "yes") > (a / 2))) {
+        std::cout << "The final answer is a YES!!! \n";
+    }
+    else if ((std::count(result, result + a, "yes") == (a / 2))) {
+        std::cout << "Try again result was tied! \n";
+    }
+    else {
+        std::cout << "The final answer is a NO!!! \n";
+    }
     char selection{ question() };
     if (selection) {
-       for (int count = 0; count < a; count++) {
-           std::cout << result[count] << '\n';
-       }
+        for (int count = 0; count < a; count++) {
+            std::cout << result[count] << '\n';
+        }
     }
-    int n = sizeof(result) / sizeof(result[0]);
-    std::cout << "Number of times 'Yes' appears: " << std::count(result, result + a, "yes");
+    /*char selection2{ questionAgain() };
+    if (selection2) {
+      for (int count2 = 0; count2 < a; count2++) {
+        std::cout << result[count2] << '\n';
+      }
+    }*/
     return 0;
 }
