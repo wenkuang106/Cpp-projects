@@ -16,7 +16,7 @@ int returnee() {
 }
 
 std::string variable() {
-    std::cout << "What would you like HEAD to be Yes or No: ";
+    std::cout << "What would you like HEADS to be Yes or No: ";
     std::string head{ };
     std::getline(std::cin >> std::ws, head);
     return head;
@@ -78,7 +78,7 @@ int main() {
     if ((std::count(result, result + a, "yes") > (a / 2))) {
         std::cout << "The final answer is a YES!!! \n";
     }
-    else if ((std::count(result, result + a, "yes") == (a / 2))) {
+    else if ((std::count(result, result + a, "yes")) == (std::count(result, result + a, "no"))) {
         std::cout << "Try again result was tied! \n";
     }
     else {
