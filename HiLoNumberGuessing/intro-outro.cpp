@@ -9,11 +9,21 @@ void intro() {
 
 void outro() {
 	char ans{ };
-	do {
+	while (ans != 'N' || ans != 'n') {
 		std::cout << "Do you wish to play again? (Y/N)";
 		std::cin >> ans;
 		if (ans == 'Y' || ans == 'y') {
 			main();
 		}
-	} while (ans != 'N' && ans != 'n');
+		else {
+			break;
+		}
+		/*do {
+			std::cout << "Do you wish to play again? (Y/N)";
+			std::cin >> ans;
+			if (ans == 'Y' || ans == 'y') {
+				main();
+			}
+		} while (ans != 'N' && ans != 'n');*/
+	}
 }
