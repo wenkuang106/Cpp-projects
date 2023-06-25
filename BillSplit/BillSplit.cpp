@@ -13,17 +13,16 @@ void oneAll() {
 }
 
 void chip() {
-	billTotal();
-	tipAmount();
+	chipBillTotal();
+	chipTipAmount();
 	chipSplits();
-	split = ((total + tip) / numPeople);
 	calculation();
 }
 
 
 void choice() {
 	int ans{};
-	std::cout << '\n' << "How do you want to split this?" << '\n';
+	std::cout << "How do you want to split this?" << '\n';
 	std::cout << "Did one person pay all or did everybody chip in?" << '\n';
 	std::cout << "If one person pay all enter 1" << '\n';
 	std::cout << "If everybody chipped in enter 2" << '\n';
@@ -41,13 +40,13 @@ void choice() {
 		}
 	}
 
-	while(true) {
-		if (ans == 1) {
-			oneAll();
-		}
-		else if (ans == 2) {
-			chip();
-		}
+	switch (ans) {
+	case 1: 
+		oneAll();
+		break;
+	case 2: 
+		chip();
+		break;
 	}
 }
 

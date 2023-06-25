@@ -15,7 +15,7 @@ void outro() {
 		std::cout << "Do you wish to split another bill? (Y/N)" << '\n';
 		std::cout << "Choice: ";
 		std::cin >> ans;
-		std::cout << '\n' << '\n';
+		std::cout << '\n';
 		if (ans == 'Y' || ans == 'y') {
 			main();
 		}

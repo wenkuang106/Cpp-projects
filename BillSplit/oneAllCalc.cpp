@@ -6,7 +6,7 @@ int people;
 double oneAllTip;
 
 double billTotal() {
-	std::cout << '\n' << "1What is the total of the bill?" << '\n';
+	std::cout << '\n' << "What is the total of the bill?" << '\n';
 	std::cout << "NOTE: Do NOT enter the dollar sign, just the number is good enough" << '\n';
 	std::cout << "Enter Bill Total: ";
 	std::cin >> oneAllTotal;
